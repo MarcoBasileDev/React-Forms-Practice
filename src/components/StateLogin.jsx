@@ -8,7 +8,14 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Submitted!");
+    console.log(enteredValues);
+
+    /* if you want to reset form using states and not the reset button
+    setEnteredValues({
+      email: "",
+      password: "",
+    });
+    */
   }
 
   function handleInputChange(identifier, value) {
