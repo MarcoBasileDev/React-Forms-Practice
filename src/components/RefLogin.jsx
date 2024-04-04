@@ -11,6 +11,10 @@ export default function Login() {
     const enteredPassword = password.current.value;
 
     console.log(enteredEmail, enteredPassword);
+    /* if you want to reset form using states and not the reset button
+    Not Suggested: it isn't a best practice manipulate DOM manually in react.
+    email.current.value = '';
+    */
   }
 
   return (
