@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function Signup() {
+  const [passwordNotEqual, setPasswordNotEqual] = useState();
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -7,6 +11,11 @@ export default function Signup() {
     // get checkbox values
     const data = Object.fromEntries(fd.entries());
     data.acquisition = acquisitionChannel;
+
+    if (data.password !== data["confirm-password"]) {
+      setPasswordNotEqual(true);
+      return;
+    }
 
     /* if you want to reset form using FormData and not the reset button
     event.target.reset();
@@ -41,7 +50,11 @@ export default function Signup() {
             id="confirm-password"
             type="password"
             name="confirm-password"
+            required
           />
+          <div className="control-error">
+            {passwordNotEqual && <p>Password must match.</p>}
+          </div>
         </div>
       </div>
 
