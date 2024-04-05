@@ -38,7 +38,7 @@ This project consists of three versions, each utilizing a different approach for
 
 ## Setup and Installation
 
-- clone the repository: git clone
+- clone the repository: git clone https://github.com/MarcoBasileDev/React-Forms-Practice.git
 - Navigate to the project directory.
 - Install dependencies: npm install
 - Run the development server using: npm run dev
